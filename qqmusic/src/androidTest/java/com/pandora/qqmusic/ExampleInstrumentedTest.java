@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.pandora.qqmusic", appContext.getPackageName());
+        assertEquals("com.pandora.com.pandora.music.com.pandora.qqmusic", appContext.getPackageName());
     }
 }
