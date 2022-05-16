@@ -1,4 +1,4 @@
-package com.pandora.music.interf;
+package com.pandora.qqmusic.interf;
 
 
 import android.os.RemoteException;

@@ -1,0 +1,14 @@
+<manifest package="com.pandora.qqmusic"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+
+        <service android:name=".service.DeamonService">
+            <intent-filter>
+                <action android:name="com.pandora.qqmusic.ACTION_DEAMON" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

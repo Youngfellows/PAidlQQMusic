@@ -22,7 +22,11 @@
         <service
             android:name=".service.QQPlayerService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.pandora.qqmusic.ACTION_QQ_MUSIC" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.pandora.music.utils;
+package com.pandora.qqmusic.utils;
 
 import android.content.ComponentName;
 import android.content.Context;

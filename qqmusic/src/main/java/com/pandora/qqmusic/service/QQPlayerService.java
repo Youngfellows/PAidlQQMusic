@@ -38,7 +38,8 @@ public class QQPlayerService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Log.d(TAG, "onStartCommand: ");
+        String action = intent.getAction();
+        Log.d(TAG, "onStartCommand:: action=" + action);
         return super.onStartCommand(intent, flags, startId);
     }
 

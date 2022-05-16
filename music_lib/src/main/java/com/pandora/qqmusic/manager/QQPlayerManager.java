@@ -1,4 +1,4 @@
-package com.pandora.music.manager;
+package com.pandora.qqmusic.manager;
 
 
 import android.content.ComponentName;
@@ -9,8 +9,8 @@ import android.os.IBinder;
 import android.os.RemoteException;
 import android.util.Log;
 
-import com.pandora.music.interf.IPlayer;
-import com.pandora.music.utils.IntentUtil;
+import com.pandora.qqmusic.interf.IPlayer;
+import com.pandora.qqmusic.utils.IntentUtil;
 import com.pandora.qqmusic.IMusicPlayer;
 import com.pandora.qqmusic.IMusicPlayerListener;
 import com.pandora.qqmusic.Song;
@@ -28,6 +28,11 @@ public class QQPlayerManager implements IPlayer {
      * AIDL服务详情
      */
     private static final String SERVICE_NAME = "com.pandora.qqmusic.service.QQPlayerService";
+
+    /**
+     * 启动QQ音乐服务的Actiom
+     */
+    private static final String ACTION_QQ_MUSIC = "com.pandora.qqmusic.ACTION_QQ_MUSIC";
 
     /**
      * 上下文
@@ -87,7 +92,8 @@ public class QQPlayerManager implements IPlayer {
         if (!isBind) {
             try {
                 Intent intent = new Intent();
-                intent.setClassName(PACKAGE_NAME, SERVICE_NAME);
+                //intent.setClassName(PACKAGE_NAME, SERVICE_NAME);
+                intent.setAction(ACTION_QQ_MUSIC);
                 intent = IntentUtil.createExplicitFromImplicitIntent(mContext, intent);
                 Log.d(TAG, "intent = " + intent);
                 if (intent != null) {
@@ -96,12 +102,12 @@ public class QQPlayerManager implements IPlayer {
                 }
             } catch (Exception e) {
                 e.printStackTrace();
-                Log.e(TAG, "绑定WeChat服务异常,未安装微信助手APK: " + e.getMessage());
+                Log.e(TAG, "绑定QQ_Music服务异常,未安装APK: " + e.getMessage());
                 Log.w(TAG, Log.getStackTraceString(e));
             }
 
             if (isBind) {
-                Log.d(TAG, "WeChat服务绑定成功了...");
+                Log.d(TAG, "QQ_Music服务绑定成功了...");
             }
         }
     }

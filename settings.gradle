@@ -1,3 +1,4 @@
 rootProject.name='PMusicAIDL'
 include ':app'
 include ':qqmusic'
+include ':music_lib'

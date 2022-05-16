@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.pandora.music.manager.QQPlayerManager;
+import com.pandora.qqmusic.manager.QQPlayerManager;
 
 public class MainActivity extends AppCompatActivity {
 

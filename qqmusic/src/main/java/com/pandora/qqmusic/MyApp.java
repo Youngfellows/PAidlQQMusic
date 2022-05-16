@@ -7,6 +7,9 @@ import android.os.Build;
 import android.util.Log;
 
 import com.pandora.qqmusic.service.QQPlayerService;
+import com.pandora.qqmusic.utils.IntentUtil;
+
+import static com.pandora.qqmusic.config.Constants.ACTION_DEAMON;
 
 public class MyApp extends Application {
 
@@ -42,5 +45,17 @@ public class MyApp extends Application {
         } else {
             startService(intent);
         }
+        notifyClient();
+    }
+
+    /**
+     * 通知客户端连接服务端
+     */
+    private void notifyClient() {
+        Intent intent = new Intent();
+        //intent.setClassName(PACKAGE_NAME, SERVICE_NAME);
+        intent.setAction(ACTION_DEAMON);
+        intent = IntentUtil.createExplicitFromImplicitIntent(mContext, intent);
+        startService(intent);
     }
 }

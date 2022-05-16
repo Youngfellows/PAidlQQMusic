@@ -3,7 +3,7 @@ package com.pandora.music;
 import android.app.Application;
 import android.content.Context;
 
-import com.pandora.music.manager.QQPlayerManager;
+import com.pandora.qqmusic.manager.QQPlayerManager;
 
 
 public class MyApp extends Application {
