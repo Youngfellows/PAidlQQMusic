@@ -1,10 +1,12 @@
-<manifest package="com.pandora.qqmusic"
+<manifest
     xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--package="com.pandora.qqmusic"-->
 
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <application>
 
-        <service android:name=".service.DeamonService">
+        <service android:name="com.pandora.qqmusic.service.DeamonService">
             <intent-filter>
                 <action android:name="com.pandora.qqmusic.ACTION_DEAMON" />
             </intent-filter>

@@ -10,7 +10,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 
-import com.pandora.qqmusic.R;
+import com.pandora.musiclib.R;
+
 
 public class NotificationUtils {
 

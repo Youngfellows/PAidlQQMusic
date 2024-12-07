@@ -3,6 +3,7 @@ apply plugin: 'com.android.library'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
+    namespace 'com.pandora.musiclib'
 
     defaultConfig {
         minSdkVersion 16
@@ -19,6 +20,16 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    sourceSets {
+        main {
+            aidl.srcDirs = ['src/main/aidl']
+        }
+    }
+
+    buildFeatures {
+        aidl true
     }
 
 }

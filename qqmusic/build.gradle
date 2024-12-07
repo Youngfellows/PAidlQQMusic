@@ -4,6 +4,8 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
+    namespace 'com.pandora.qqmusic'
+
     defaultConfig {
         applicationId "com.pandora.qqmusic"
         minSdkVersion 16
@@ -21,6 +23,15 @@ android {
         }
     }
 
+    sourceSets {
+        main {
+            aidl.srcDirs = ['src/main/aidl']
+        }
+    }
+
+    buildFeatures {
+        aidl true
+    }
 }
 
 dependencies {
